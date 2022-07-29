@@ -1,0 +1,7 @@
+package com.example.laptops;
+
+import com.example.interfaces.Laptop;
+
+public class Lenovo implements Laptop{
+	public String 
+}

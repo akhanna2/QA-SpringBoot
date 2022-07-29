@@ -1,0 +1,12 @@
+package com.example.cars;
+
+import com.example.interfaces.Car;
+
+public class Merc implements Car{
+	public String spec() {
+		
+		Engine eng;
+		
+		return "This is a Merc" + eng.type;
+	}
+	}

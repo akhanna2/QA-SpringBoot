@@ -1,0 +1,21 @@
+package com.example.service;
+
+import org.modelmapper.ModelMapper;
+
+import com.example.persistence.domain.Musician;
+import com.example.persistence.repository.MusicianRepository;
+import com.example.rest.dto.MusicianDTO;
+
+import lombok.AllArgsConstructor;
+
+@AllArgsConstructor
+public class MusicianService {
+	
+	private MusicianRepository repo;
+	private ModelMapper mapper;
+	
+	private MusicianDTO mapToDTO(Musician musician) {
+		return this.mapper.map(musician, MusicianDTO.class);
+	}
+
+}

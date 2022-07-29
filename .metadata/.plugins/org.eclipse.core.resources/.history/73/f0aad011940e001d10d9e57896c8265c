@@ -1,0 +1,12 @@
+package com.example.service;
+
+import com.example.persistence.repository.MusicianRepository;
+
+import lombok.AllArgsConstructor;
+
+@AllArgsConstructor
+public class MusicianService {
+	
+	private MusicianRepository repo;
+
+}

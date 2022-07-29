@@ -1,0 +1,9 @@
+package com.example.hdds;
+
+import com.example.interfaces.HDD;
+
+public class Hitachi implements HDD {
+	public String storage() {
+		return "Hitachi HDD";
+	}
+}

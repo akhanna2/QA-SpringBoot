@@ -1,0 +1,12 @@
+package com.example.service;
+
+import com.example.persistence.repository.BandRepository;
+
+import lombok.AllArgsConstructor;
+
+@AllArgsConstructor
+public class BandService {
+
+	private BandRepository repo;
+	
+}

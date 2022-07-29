@@ -1,0 +1,13 @@
+package com.example.laptops;
+
+import com.example.interfaces.HDD;
+import com.example.interfaces.Laptop;
+
+public class Dell implements Laptop{
+	
+	HDD hdd;
+	
+ public String config() {
+	 return "This is a Dell laptop with a " + hdd.storage();
+ }
+}

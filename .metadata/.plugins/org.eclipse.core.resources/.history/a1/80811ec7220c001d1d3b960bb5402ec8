@@ -1,0 +1,7 @@
+package com.example.cars;
+
+public class Engine {
+	
+	String type = "V8";
+
+}

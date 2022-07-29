@@ -1,0 +1,12 @@
+package com.example.types;
+
+import org.springframework.stereotype.Component;
+
+import com.example.interfaces.Engine;
+
+@Component("V6")
+public class V6 implements Engine {
+	public String type() {
+		return "V6";
+	}
+}

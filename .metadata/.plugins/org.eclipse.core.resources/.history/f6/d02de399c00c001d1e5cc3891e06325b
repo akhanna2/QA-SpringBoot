@@ -1,0 +1,9 @@
+package com.example.hdds;
+
+import com.example.interfaces.HDD;
+
+public class Toshiba implements HDD{
+	public String storage() {
+		return "Toshiba HDD";
+	}
+}

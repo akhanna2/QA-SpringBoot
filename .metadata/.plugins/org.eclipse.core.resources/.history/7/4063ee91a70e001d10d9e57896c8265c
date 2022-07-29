@@ -1,0 +1,44 @@
+package com.example.service;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.stereotype.Service;
+
+import com.example.model.Account;
+import com.example.repo.AccountRepo;
+
+
+@Service
+public class AccountService {
+	
+	private AccountRepo repo;
+
+	public AccountService(AccountRepo repo) {
+		super();
+		this.repo = repo;
+	}
+	
+	public Account addAccount(Account acc) {
+		return this.repo.save(acc);
+	}
+	
+	public List<Account> readAccount(){
+		return this.repo.findAll();
+	}
+	
+	public Account updateAccount(Long id, Account acc) {
+		Optional<Account> tempAccount = this.repo.findById(id);
+		Account existingAccount = tempAccount.get();
+		existingAccount.setAccountNumber(acc.getAccountNumber());
+		existingAccount.setName(acc.getName());
+		return this.repo.save(existingAccount);
+	}
+	
+	public boolean deleteAccount(Long id) {
+		this.repo.deleteById(id);
+		boolean exists = this.repo.existsById(id);
+		return !exists;
+	}
+
+}

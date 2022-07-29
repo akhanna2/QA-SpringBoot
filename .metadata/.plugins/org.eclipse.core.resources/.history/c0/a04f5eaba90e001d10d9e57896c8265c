@@ -1,0 +1,57 @@
+package com.example.service;
+
+import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
+
+import org.modelmapper.ModelMapper;
+import org.springframework.stereotype.Service;
+
+import com.example.dto.AccountDTO;
+import com.example.model.Account;
+import com.example.repo.AccountRepo;
+
+
+@Service
+public class AccountService {
+	
+	private AccountRepo repo;
+	private ModelMapper mapper;
+	
+	public AccountService(AccountRepo repo, ModelMapper mapper) {
+		super();
+		this.repo = repo;
+		this.mapper = mapper;
+	}
+
+	private AccountDTO mapToDTO(Account account) {
+		return this.mapper.map(account, AccountDTO.class);
+	}
+	
+	public AccountDTO addAccount(Account acc) {
+		Account saved = this.repo.save(acc);
+		return this.mapToDTO(saved);
+	}
+	
+	public List<AccountDTO> readAccount(){
+		return this.repo.findAll().stream().map(this::mapToDTO).collect(Collectors.toList());
+	}
+	
+	public AccountDTO updateAccount(Long id, Account acc) {
+		Optional<Account> tempAccount = this.repo.findById(id);
+		Account existingAccount = tempAccount.get();
+		
+		existingAccount.setAccountNumber(acc.getAccountNumber());
+		existingAccount.setName(acc.getName());
+		
+		Account updated = this.repo.save(existingAccount);
+		return this.mapToDTO(updated);
+	}
+	
+	public boolean deleteAccount(Long id) {
+		this.repo.deleteById(id);
+		boolean exists = this.repo.existsById(id);
+		return !exists;
+	}
+
+}
