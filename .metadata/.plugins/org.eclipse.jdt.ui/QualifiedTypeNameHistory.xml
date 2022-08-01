@@ -1,17 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="com.example.model.Account"/>
-    <fullyQualifiedTypeName name="org.springframework.context.annotation.Bean"/>
-    <fullyQualifiedTypeName name="com.example.repo.PersonRepo"/>
-    <fullyQualifiedTypeName name="org.modelmapper.ModelMapper"/>
-    <fullyQualifiedTypeName name="org.springframework.stereotype.Controller"/>
-    <fullyQualifiedTypeName name="com.example.service.PersonService"/>
-    <fullyQualifiedTypeName name="com.example.dto.PersonDTO"/>
-    <fullyQualifiedTypeName name="com.example.model.Person"/>
-    <fullyQualifiedTypeName name="lombok.Getter"/>
-    <fullyQualifiedTypeName name="lombok.Setter"/>
-    <fullyQualifiedTypeName name="com.example.model.Wood"/>
-    <fullyQualifiedTypeName name="com.example.exception.ProductNotFoundException"/>
     <fullyQualifiedTypeName name="javax.validation.constraints.Size"/>
     <fullyQualifiedTypeName name="javax.validation.constraints.Min"/>
     <fullyQualifiedTypeName name="javax.validation.constraints.Max"/>
@@ -21,7 +9,6 @@
     <fullyQualifiedTypeName name="javax.persistence.OneToMany"/>
     <fullyQualifiedTypeName name="javax.persistence.FetchType"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
-    <fullyQualifiedTypeName name="javax.persistence.GenerationType"/>
     <fullyQualifiedTypeName name="org.hibernate.annotations.OnDelete"/>
     <fullyQualifiedTypeName name="org.hibernate.annotations.OnDeleteAction"/>
     <fullyQualifiedTypeName name="javax.persistence.Entity"/>
@@ -60,4 +47,17 @@
     <fullyQualifiedTypeName name="javax.persistence.EntityNotFoundException"/>
     <fullyQualifiedTypeName name="com.example.exception.AccountNotFoundException"/>
     <fullyQualifiedTypeName name="com.example.persistence.domain.Person"/>
+    <fullyQualifiedTypeName name="org.springframework.boot.test.context.SpringBootTest"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+    <fullyQualifiedTypeName name="com.qa.demo.service.PersonService"/>
+    <fullyQualifiedTypeName name="org.springframework.boot.test.mock.mockito.MockBean"/>
+    <fullyQualifiedTypeName name="com.qa.demo.persistence.repo.PersonRepo"/>
+    <fullyQualifiedTypeName name="com.qa.demo.persistence.domain.Person"/>
+    <fullyQualifiedTypeName name="org.junit.jupiter.api.Test"/>
+    <fullyQualifiedTypeName name="com.example.service.ProductService"/>
+    <fullyQualifiedTypeName name="com.example.repo.ProductRepo"/>
+    <fullyQualifiedTypeName name="com.example.model.Product"/>
+    <fullyQualifiedTypeName name="org.mockito.Mockito"/>
+    <fullyQualifiedTypeName name="org.assertj.core.api.Assertions"/>
+    <fullyQualifiedTypeName name="javax.persistence.GenerationType"/>
 </qualifiedTypeNameHistroy>
